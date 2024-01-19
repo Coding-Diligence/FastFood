@@ -3,5 +3,4 @@
 </style>
 <?php
 require_once 'templates/header.php';
-require_once 'config/system.php';
 require_once 'require/common.php';

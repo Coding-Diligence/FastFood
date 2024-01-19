@@ -1,4 +1,12 @@
 <?php 
+function generateCSRFToken() {
+    if (!isset($_SESSION['csrf_token'])) {
+        $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+    }
+}
+session_start();
+generateCSRFToken();
+require_once './config/system.php';
 try {
     $bdLink = new PDO('mysql:host=' . $paramsServer['server'] . ';port=' . $paramsServer['port'] . ';dbname=' . $paramsServer['database'] . ';charset=utf8', $paramsServer['username'], $paramsServer['password']);
     $bdLink->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
@@ -8,3 +16,4 @@ try {
     print "Error ! database connection error<br/>";
     die();
 }
+var_dump($_SESSION);
