@@ -1,2 +1,2 @@
 <?php 
-print '<div class="header">Hey</div>';
+// print '<div class="header">Hey</div>';
