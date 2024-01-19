@@ -1,11 +1,8 @@
 <?php 
-function generateCSRFToken() {
-    if (!isset($_SESSION['csrf_token'])) {
-        $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
-    }
-}
 session_start();
-generateCSRFToken();
+if (!isset($_SESSION['csrf_token'])) {
+    $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+}
 require_once './config/system.php';
 try {
     $bdLink = new PDO('mysql:host=' . $paramsServer['server'] . ';port=' . $paramsServer['port'] . ';dbname=' . $paramsServer['database'] . ';charset=utf8', $paramsServer['username'], $paramsServer['password']);
@@ -16,4 +13,4 @@ try {
     print "Error ! database connection error<br/>";
     die();
 }
-var_dump($_SESSION);
+var_dump($_SESSION['names']);
