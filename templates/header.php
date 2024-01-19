@@ -1,2 +1,2 @@
 <?php 
-return true;
+print '<div class="header">Hey</div>';

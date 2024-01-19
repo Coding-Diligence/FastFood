@@ -1,0 +1,17 @@
+html {
+    background-color: #0E1424;
+}
+.header {
+    padding: 25px;
+    background-color: #1C2833;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 16px 20px 30px 20px;
+    display: flex;
+    align-items: center;
+    text-shadow: 0 0 5px rgba(0,0,0,0.5);
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+}
