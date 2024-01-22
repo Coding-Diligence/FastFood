@@ -1,5 +1,8 @@
 <?php
 session_start();
+if (!isset($_SESSION['csrf_token'])) {
+    $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+} 
 require_once dirname(__DIR__) . '/../config/system.php';
 
 if (ENVIRONMENT === 'developpement') {
