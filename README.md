@@ -42,3 +42,23 @@ Accédez à l'application dans votre navigateur en visitant http://localhost:800
 - Catégorisation des Produits
 - Panier d'Achat
 - Panneau d'Administration
+
+## Utilisation
+
+- Page d'Accueil (`index.php`)
+- Page de Connexion (`login.php`)
+- Page de Panier (`panier.php`)
+- Page Catégorie (`pizza.php`, etc.)
+- Page Admin (`admin.php`)
+
+## Structure des fichiers
+
+fast-foods/
+|-- admin.php
+|-- category.php
+|-- database.php
+|-- fastfoods.sql
+|-- header.php
+|-- index.php
+|-- login.php
+|-- ... (autres fichiers)
