@@ -31,8 +31,8 @@ Pour exécuter cette application localement, suivez ces étapes :
 
 5. Démarrez votre serveur local.
 
-```bash
-php -S localhost:8000
+   ```bash
+   php -S localhost:8000
 
-# Accédez à l'application dans votre navigateur en visitant http://localhost:8000.
+Accédez à l'application dans votre navigateur en visitant http://localhost:8000.
 
