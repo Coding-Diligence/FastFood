@@ -36,3 +36,9 @@ Pour exécuter cette application localement, suivez ces étapes :
 
 Accédez à l'application dans votre navigateur en visitant http://localhost:8000.
 
+## Fonctionnalités
+
+- Authentification des Utilisateurs
+- Catégorisation des Produits
+- Panier d'Achat
+- Panneau d'Administration
