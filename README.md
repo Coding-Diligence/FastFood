@@ -9,10 +9,6 @@ Fast Foods est une application web qui permet aux utilisateurs de parcourir et d
 - [Pour commencer](#pour-commencer)
 - [Fonctionnalités](#fonctionnalités)
 - [Utilisation](#utilisation)
-- [Structure des fichiers](#structure-des-fichiers)
-- [Dépendances](#dépendances)
-- [Contributions](#contributions)
-- [Licence](#licence)
 
 ## Pour commencer
 
@@ -51,23 +47,5 @@ Accédez à l'application dans votre navigateur en visitant http://localhost:800
 - Page Catégorie (`pizza.php`, etc.)
 - Page Admin (`admin.php`)
 
-## Structure des fichiers
 
-fast-foods/
-|-- admin.php
-|-- category.php
-|-- database.php
-|-- fastfoods.sql
-|-- header.php
-|-- index.php
-|-- login.php
-|-- modele.php
-|-- panier.php
-|-- pizza.php
-|-- README.md
-|-- uploads/
-|   |-- fastfood_logo.jpg
-|-- css/
-|   |-- login.css
-|-- ...
 
