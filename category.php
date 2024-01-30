@@ -1,20 +1,28 @@
+<?php 
+include_once 'modele.php';
+$categories = get_categories($bdLink);
+?>
 
 <div class="card-container">
-    <?php foreach ($products as $p) { ?>
-        <div class="card">
-            <img src="./uploads/<?= $p['filename']; ?>" class="card-image">
-            <div class="card-details">
-                <p class="card-title"><?= $p['name']; ?></p>
-                <div class="card-actions">
-                    <a href="/index.php/product?id=<?= $p['id']; ?>" class="card-link">Voir</a>
-                    <small class="card-price"><?= $p['price']; ?>€</small>
+    <?php foreach ($categories as $c) { ?>
+        <a href="<?= $c['name']; ?>.php" class="card-link"> 
+            <div class="card">
+                <img src="./uploads/<?= $c['name']; ?>" class="card-image">
+                <div class="card-details">
+                    <p class="card-title"><?= $c['name']; ?></p>
+                    <div class="card-actions">
+                    </div>
                 </div>
             </div>
-        </div>
+        </a> 
     <?php } ?>
 </div>
 
 <style>
+    html {
+        background-color: #181B1E;
+        color: white;
+    }
 .card-container {
     display: flex;
     flex-wrap: wrap;
@@ -27,7 +35,7 @@
     margin: 10px;
     margin-bottom: 100px;
     padding: 10px;
-    width: 200px;
+    width: 400px;
     text-align: center;
 }
 
@@ -54,15 +62,14 @@
 
 .card-link {
     text-decoration: none;
-    background-color: #007bff;
     color: #fff;
     padding: 5px 10px;
     border-radius: 4px;
+    display: block; 
 }
 
 .card-price {
     font-size: 14px;
     color: #888;
 }
-
 </style>

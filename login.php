@@ -1,5 +1,5 @@
-<?php require_once __DIR__ . '/src/require/common.php';
-
+<?php require_once 'database.php';
+require_once 'header.php';
 // =================================================================================================
 
 if (!isset($_SESSION['csrf_token'])) {
@@ -16,7 +16,7 @@ function isUsernameFree($bdLink, $pUsername) {
     if (IsNullOrEmptyString($pUsername)) {
         return false;
     }
-    $query = 'SELECT name FROM users WHERE name = ?';
+    $query = 'SELECT name FROM user WHERE name = ?';
     try {
         $stmt = $bdLink->prepare($query);
         $stmt->bindParam(1, $pUsername);
@@ -29,7 +29,6 @@ function isUsernameFree($bdLink, $pUsername) {
 }
 
 // =================================================================================================
-
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['login'])) {
     if (!isset($_POST['csrf_token']) || $_POST['csrf_token'] !== $_SESSION['csrf_token']) {
         echo "CSRF token validation failed.";
@@ -39,7 +38,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['login'])) {
     $password = $_POST['password'];
     if (!isNullOrEmptyString($username) && !isNullOrEmptyString($password)) {
         $hashedPassword = getHashedString($password);
-        $query = 'SELECT id, name, password FROM users WHERE name = ?';
+        $query = 'SELECT id, name, password FROM user WHERE name = ?';
         $stmt = $bdLink->prepare($query);
         $stmt->bindParam(1, $username);
         $stmt->execute();
@@ -63,7 +62,7 @@ function insertUser($bdLink, $pUsername, $pPassword) {
     if (IsNullOrEmptyString($pUsername) || IsNullOrEmptyString($pPassword)) {
         throw new InvalidArgumentException('Parameters not proper strings');
     }
-    $query = 'INSERT INTO users (name, password) VALUES (?, ?)';
+    $query = 'INSERT INTO user (name, password) VALUES (?, ?)';
     try {
         $stmt = $bdLink->prepare($query);
         $hashedPassword = getHashedString($pPassword);
@@ -101,7 +100,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['signup'])) {
 
 // =================================================================================================
 
-var_dump($_SESSION);
+
 ?>
 
 <!DOCTYPE html>
@@ -160,22 +159,23 @@ var_dump($_SESSION);
     }
   </script>
   <style>
-    body {
-        height: 100%;
-        /* background-image: url("img/login_background.jpg"); */
-        background-size: cover;
+    html {
+        background-color: #181B1E;
+        color: white;
     }
     .container {
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
+      height: 75vh;
     }
     
     .card {
-      width: 300px;
-      height: 300px;
-      perspective: 1000px;
+        border: 4mm ridge #383637;
+        background-color: #181B1E;
+        width: 300px;
+        height: 300px;
+        perspective: 1000px;
     }
     
     .card-inner {
