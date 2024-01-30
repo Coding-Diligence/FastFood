@@ -73,3 +73,4 @@ $categories = get_categories($bdLink);
     color: #888;
 }
 </style>
+<?php require_once 'footer.php'; ?>

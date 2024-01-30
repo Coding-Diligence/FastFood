@@ -232,3 +232,4 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['signup'])) {
   </style>
 </body>
 </html>
+<?php require_once 'footer.php'; ?> 

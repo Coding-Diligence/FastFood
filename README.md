@@ -1,32 +1,38 @@
-Fast Foods Application Web
-Aperçu
-Fast Foods est une application web qui permet aux utilisateurs de parcourir et d'acheter divers articles de restauration rapide. Elle comprend des fonctionnalités telles que l'authentification des utilisateurs, la catégorisation des produits, la fonctionnalité de panier d'achat et un panneau d'administration pour la gestion des produits et des utilisateurs.
+# Application Web Fast Foods
 
-Table des matières
-Commencer
-Fonctionnalités
-Utilisation
-Structure des fichiers
-Dépendances
-Contributions
-Licence
-Commencer
-Pour exécuter cette application web en local, suivez ces étapes :
+## Aperçu
 
-Clonez le dépôt sur votre machine locale.
+Fast Foods est une application web qui permet aux utilisateurs de parcourir et d'acheter divers produits de restauration rapide. Elle comprend des fonctionnalités telles que l'authentification des utilisateurs, la catégorisation des produits, la fonctionnalité de panier d'achat, et un panneau d'administration pour la gestion des produits et des utilisateurs.
 
-bash
-Copy code
-git clone https://github.com/votre-nom/fast-foods-web-app.git
-Assurez-vous d'avoir PHP et un serveur de base de données MySQL installés.
+## Table des matières
 
-Importez la sauvegarde SQL fournie (fastfoods.sql) dans votre base de données MySQL.
+- [Pour commencer](#pour-commencer)
+- [Fonctionnalités](#fonctionnalités)
+- [Utilisation](#utilisation)
+- [Structure des fichiers](#structure-des-fichiers)
+- [Dépendances](#dépendances)
+- [Contributions](#contributions)
+- [Licence](#licence)
 
-Configurez la connexion à la base de données dans database.php en mettant à jour les paramètres dans la structure de commutation en fonction de votre environnement.
+## Pour commencer
 
-Démarrez un serveur de développement PHP.
+Pour exécuter cette application localement, suivez ces étapes :
 
-bash
-Copy code
+1. Clonez le dépôt sur votre machine locale.
+
+   ```bash
+   git clone https://github.com/votre-nom/fast-foods-web-app.git
+
+2. Assurez-vous d'avoir PHP et un serveur de base de données MySQL installés.
+
+3. Importez le dump SQL fourni (`fastfoods.sql`) dans votre base de données MySQL.
+
+4. Configurez la connexion à la base de données dans `database.php` en modifiant les paramètres appropriés.
+
+5. Démarrez votre serveur local.
+
+```bash
 php -S localhost:8000
-Accédez à l'application dans votre navigateur web à l'adresse http://localhost:8000.
+
+# Accédez à l'application dans votre navigateur en visitant http://localhost:8000.
+

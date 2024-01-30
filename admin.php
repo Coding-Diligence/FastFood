@@ -217,3 +217,4 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['remove_product'])) {
     }
 </style>
 </html>
+<?php require_once 'footer.php'; ?>

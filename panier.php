@@ -101,3 +101,4 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['remove_from_panier']))
         color: #888;
     }
 </style>
+<?php require_once 'footer.php'; ?>
