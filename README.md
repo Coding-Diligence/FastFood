@@ -61,4 +61,13 @@ fast-foods/
 |-- header.php
 |-- index.php
 |-- login.php
-|-- ... (autres fichiers)
+|-- modele.php
+|-- panier.php
+|-- pizza.php
+|-- README.md
+|-- uploads/
+|   |-- fastfood_logo.jpg
+|-- css/
+|   |-- login.css
+|-- ...
+
